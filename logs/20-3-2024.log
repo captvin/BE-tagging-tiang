@@ -12,3 +12,16 @@
 [2024-03-20T03:27:30.298Z] POST /user/login 200 | 641 bytes - 44.688 ms
 [2024-03-20T03:28:21.653Z] POST /user/changePass 200 | 9 bytes - 51.668 ms
 [2024-03-20T03:28:33.771Z] POST /user/login 200 | 641 bytes - 38.061 ms
+[2024-03-20T04:15:29.016Z] GET /proses/pole 200 | 1233 bytes - 4273.253 ms
+[2024-03-20T04:15:34.035Z] GET /proses/pole 200 | 1233 bytes - 845.227 ms
+[2024-03-20T04:15:36.883Z] GET /proses/pole 200 | 1233 bytes - 840.704 ms
+[2024-03-20T04:15:42.363Z] GET /proses/sto 200 | 113 bytes - 5.946 ms
+[2024-03-20T04:17:12.719Z] GET /proses/provider 200 | 9646 bytes - 42.552 ms
+[2024-03-20T04:17:36.271Z] POST /proses/tag 500 | 20 bytes - 497.835 ms
+[2024-03-20T04:21:04.780Z] POST /proses/tag 500 | 20 bytes - 49.986 ms
+[2024-03-20T04:21:57.859Z] POST /proses/tag 500 | 20 bytes - 115.032 ms
+[2024-03-20T04:22:57.889Z] POST /proses/tag 500 | 20 bytes - 45.709 ms
+[2024-03-20T04:24:16.247Z] POST /proses/tag 500 | 21 bytes - 148.175 ms
+[2024-03-20T04:24:41.576Z] POST /proses/tag 500 | 21 bytes - 76.487 ms
+[2024-03-20T04:25:27.814Z] POST /proses/tag 500 | 2 bytes - 112.495 ms
+[2024-03-20T04:27:00.071Z] POST /proses/tag 200 | 68 bytes - 1884.054 ms

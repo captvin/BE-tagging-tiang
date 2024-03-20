@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon ./bin/www",
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "deploy": "pm2 start ./bin/www"
   },
   "author": "adhe alvin",
   "license": "ISC",

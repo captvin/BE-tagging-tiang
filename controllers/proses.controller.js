@@ -100,7 +100,7 @@ async function tagging(req, res, next) {
     if (!ODCB) {
         condition_odcb = `{"option":"TIDAK", "comment":"-", "photo":"-"}`
     } else {
-        condition_odcb = `{"option":"YA", "comment":"${ODCB?.comment}", "photo":"/evidence/alpro-competitor/${idPole}/odcb/${img_name}"}`
+        condition_odcb = `{"option":"YA", "comment":"${ODCB?.comment}", "photo":"/evidence/alpro-competitor/${idPole}/${img_name}"}`
     }
 
     if (!ODP) {
@@ -210,11 +210,11 @@ async function tagging(req, res, next) {
                         res.status(200).json({ message: `terima kasih ${req.user.name} teknisi witel ${req.user.witel}` })
                     })
                     .catch((err) => {
-                        res.status(500).send('Something went wrong')
+                        res.status(500).send(err)
                     })
             })
             .catch((err) => {
-                res.status(500).send('Something went wrong')
+                res.status(500).send(err)
             })
     } else {
         await tagtiangbot_checklist_tiang_r5_provider.destroy({ where: { tagtiangbot_checklist_uuid: check.uuid } })
@@ -266,15 +266,15 @@ async function tagging(req, res, next) {
                                 res.status(200).json({ message: `terima kasih ${req.user.name} teknisi witel ${req.user.witel}` })
                             })
                             .catch((err) => {
-                                res.status(500).send('Something went wrong')
+                                res.status(500).send('Something went wrong2')
                             })
                     })
                     .catch((err) => {
-                        res.status(500).send('Something went wrong')
+                        res.status(500).send('Something went wrong3')
                     })
             })
             .catch((err) => {
-                res.status(500).send('Something went wrong')
+                res.status(500).send('Something went wrong4')
             })
     }
 }

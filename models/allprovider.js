@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     sequelize,
-    tableName: 'allprovider',
+    tableName: 'allProvider',
     timestamps: false
   });
 };
