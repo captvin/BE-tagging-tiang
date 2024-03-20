@@ -12,9 +12,8 @@ async function login(req, res, next) {
 
     const result = await tagtiangbot_user_list.findOne({ where: { username } })
     if (!result) {
-        return res.json({
-            message: "User not found",
-            code: 401
+        return res.status(404).json({
+            message: "User not found"
         });
     }
 
@@ -45,24 +44,36 @@ async function login(req, res, next) {
     }
 
     else {
-        return res.json({
-            message: "Wrong password",
-            code: 402
+        return res.status(401).json({
+            message: "Wrong password"
         })
     }
 
 
 }
 
-async function getBy(req, res, next) {
-    const {body} = req
-    body.password = await hashPass(body.password)
+async function changePass(req, res, next) {
+    const { oldPass, newPass } = req.body
+    const id = req.user.id
+    
+    const check = await tagtiangbot_user_list.findByPk(id)
 
-    res.json(body.password)
+    const password_match = await bcrypt.compare(oldPass, check.password)
+
+    if(password_match){
+        const newPassEncrypt = await hashPass(newPass)
+        const result = await tagtiangbot_user_list.update({password : newPassEncrypt}, {where: {id}})
+
+        return result 
+            ? res.status(200).json("Success")
+            : res.status(500).json('Server Error')
+    } else {
+        return res.status(401).json("Password Salah")
+    }
 }
 
 module.exports = {
     login,
-    getBy
+    changePass
 }
 

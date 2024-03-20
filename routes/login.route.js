@@ -1,8 +1,9 @@
 const Router = require('express').Router()
-const { login, getBy } = require('@controllers/login.controller')
+const { login, changePass } = require('@controllers/login.controller')
+const authGuard = require('@middlewares/auth-guard')
 
 Router
     .post('/login', login)
-    .post('/getBy', getBy)
+    .use(authGuard).post('/changePass', changePass)
 
 module.exports = { Router, route: '/user' }
