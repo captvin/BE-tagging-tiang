@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon ./bin/www",
     "start": "node ./bin/www",
-    "deploy": "pm2 start ./bin/www"
+    "deploy": "pm2 start ./bin/www --name BE-tagging-tiang --watch"
   },
   "author": "adhe alvin",
   "license": "ISC",
