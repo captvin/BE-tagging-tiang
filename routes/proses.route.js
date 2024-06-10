@@ -1,5 +1,5 @@
 const Router = require('express').Router()
-const { findPole, tagging, getProv, getSTO } = require('@controllers/proses.controller')
+const { findPole, tagging, getProv, getSTO, newPole } = require('@controllers/proses.controller')
 const authGuard = require('@middlewares/auth-guard')
 const multer = require('multer');
 
@@ -11,8 +11,9 @@ const upload = multer({
 Router
     .use(authGuard)
     .get('/pole', findPole)
-    .post('/tag',upload.fields([{name: "ODPImage", maxCount:1},{name: "ODCBImage", maxCount:1}, {name: "alproImage", maxCount:1}, {name: "poleImage", maxCount:1}, {name: "kudcImage", maxCount:1}]), tagging)
+    .post('/tag', upload.fields([{name: "ODPImage", maxCount:1},{name: "ODCBImage", maxCount:1}, {name: "alproImage", maxCount:1}, {name: "poleImage", maxCount:1}, {name: "kudcImage", maxCount:1}]), tagging)
     .get('/provider', getProv)
     .get('/sto', getSTO)
+    .post('/new', upload.fields([{name: "ODPImage", maxCount:1},{name: "ODCBImage", maxCount:1}, {name: "alproImage", maxCount:1}, {name: "poleImage", maxCount:1}, {name: "kudcImage", maxCount:1}]), newPole)
 
 module.exports = { Router, route: '/proses' } 

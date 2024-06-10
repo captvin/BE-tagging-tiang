@@ -1,0 +1,4 @@
+[2024-03-30T11:55:47.002Z] GET /proses/pole 200 | 2 bytes - 1095.965 ms
+[2024-03-30T11:56:00.638Z] GET /proses/provider 200 | 9646 bytes - 40.520 ms
+[2024-03-30T13:21:06.832Z] GET /proses/pole 200 | 2 bytes - 1625.852 ms
+[2024-04-01T01:36:31.843Z] POST /proses/tag - | - bytes - - ms

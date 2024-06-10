@@ -4,7 +4,7 @@ const {JWT_SECRET_KEY}= process.env
 function tokenGenerator(payload) {
     return new Promise((resolve, reject) => {
         try {
-            const token = jsonwebtoken.sign(payload, JWT_SECRET_KEY, { expiresIn: null })
+            const token = jsonwebtoken.sign(payload, JWT_SECRET_KEY, { expiresIn: '30m' })
             resolve(token)
         } catch (error) {
             reject(error)

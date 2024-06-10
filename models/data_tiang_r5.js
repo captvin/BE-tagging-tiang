@@ -66,6 +66,14 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(400),
       allowNull: true
     },
+    created_at: {
+      type: DataTypes.STRING(400),
+      allowNull: true
+    },
+    updated_at: {
+      type: DataTypes.STRING(400),
+      allowNull: true
+    },
     status_object: {
       type: DataTypes.STRING(255),
       allowNull: true

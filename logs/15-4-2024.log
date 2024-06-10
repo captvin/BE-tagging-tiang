@@ -1,0 +1,5 @@
+[2024-04-15T14:41:02.204Z] GET /proses/pole 200 | 136 bytes - 952.089 ms
+[2024-04-15T14:41:15.250Z] GET /proses/pole 200 | 136 bytes - 923.010 ms
+[2024-04-15T14:41:32.815Z] GET /proses/pole 200 | 136 bytes - 1020.372 ms
+[2024-04-15T14:41:38.607Z] GET /proses/provider 200 | 9646 bytes - 37.838 ms
+[2024-04-16T02:01:00.721Z] POST /user/login 200 | 699 bytes - 851.953 ms

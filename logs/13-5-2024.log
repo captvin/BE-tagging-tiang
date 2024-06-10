@@ -1,0 +1,10 @@
+[2024-05-13T04:25:49.338Z] POST /user/login 401 | 28 bytes - 229.004 ms
+[2024-05-13T04:27:02.622Z] POST /user/login 401 | 28 bytes - 62.768 ms
+[2024-05-13T04:27:13.639Z] POST /user/login 200 | 699 bytes - 126.912 ms
+[2024-05-13T04:27:22.292Z] GET /proses/pole 200 | 3157 bytes - 881.086 ms
+[2024-05-13T04:54:49.415Z] GET /proses/pole 200 | 3157 bytes - 895.995 ms
+[2024-05-13T04:55:16.745Z] GET /proses/pole 200 | 3157 bytes - 910.692 ms
+[2024-05-13T06:35:38.876Z] GET /proses/pole 403 | 33 bytes - 28.923 ms
+[2024-05-13T06:35:56.162Z] GET /proses/pole 403 | 33 bytes - 19.854 ms
+[2024-05-13T07:44:31.748Z] GET /proses/pole 403 | 33 bytes - 16.320 ms
+[2024-05-13T07:46:16.600Z] GET /proses/pole 403 | 33 bytes - 15.521 ms

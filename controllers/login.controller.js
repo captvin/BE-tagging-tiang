@@ -1,4 +1,5 @@
 const { tagtiangbot_user_list} = require('@models')
+const {Sequelize} = require('sequelize')
 const { tokenGenerator } = require('@utils/tokenGenerator')
 const bcrypt = require('bcrypt');
 const { hashPass } = require('@utils/hashPass')
@@ -7,15 +8,18 @@ const {format} = require('date-fns')
 async function login(req, res, next) {
 
     // try{
+    console.log(req.body)
 
     const { username } = req.body
 
-    const result = await tagtiangbot_user_list.findOne({ where: { username } })
+    const result = await tagtiangbot_user_list.findOne({ where: Sequelize.where(Sequelize.fn('BINARY', Sequelize.col('username')), username) })
     if (!result) {
         return res.status(404).json({
             message: "User not found"
         });
     }
+    // console.log(res)
+    // console.log(res.header)
 
 
     const { password } = req.body
